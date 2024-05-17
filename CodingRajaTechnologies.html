@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sree Resume Builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CodingRajaTechnologies.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Resume Builder</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Select Template</h3>
+                <div class="form-group">
+                    <select class="form-control" id="templateSelect">
+                        <option value="template1">Template 1</option>
+                        <option value="template2">Template 2</option>
+                        <option value="template1">Template 3</option>
+                    </select>
+                </div>
+
+                <h3>Resume Sections</h3>
+                <form id="resumeForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education</label>
+                        <textarea class="form-control" id="education" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Experience</label>
+                        <textarea class="form-control" id="experience" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Skills</label>
+                        <textarea class="form-control" id="skills" rows="3" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="generateResume()">Preview Resume</button>
+                </form>
+            </div>
+
+            <div class="col-md-8">
+                <h3>Resume Preview</h3>
+                <div id="resumePreview" class="border p-3"></div>
+                <button type="button" class="btn btn-success mt-3" onclick="downloadResume()">Download as PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="CodingRajaTechnologies.js"></script>
+</body>
+
+</html>
